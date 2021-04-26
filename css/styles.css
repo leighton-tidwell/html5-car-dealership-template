@@ -1,0 +1,189 @@
+/* Resetting body and h1 components to have no margin */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body, 
+h1{
+  font-family: 'Roboto', sans-serif; /* sets font for whole body */
+  margin: 0;
+}
+
+:root{
+  --main-gradient: 180deg, rgba(77,176,53,1) 0%, rgba(57,132,40,1) 100%;
+  --snow-white: #FFFAFA;
+  --primary-dark: #398428;
+  --primary-light: #4DB035;
+  --secondary-color: #2D2D2D;
+  --secondary-text-color: #3B3C36;
+  --testimonial-text: #4BD62A;
+  --dark-color: #000;
+}
+
+/* Global Components */
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+/* Header Components */
+header {
+  /* assigning a background, we use .. to go up a directory */
+  /* make sure the url is inside of quotes */
+  background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.27) 100%), url("../images/hands-grasping-a-steering-wheel.jpg");;
+  background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.27) 100%), url("../images/hands-grasping-a-steering-wheel.jpg");;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.27) 100%), url("../images/hands-grasping-a-steering-wheel.jpg");
+  background-position: center center;
+  background-size: cover;
+}
+
+nav {
+  color: var(--snow-white);
+  display: flex; /* allow flexbox */
+  flex-direction: row; /* things go left to right */
+  align-items: center; /* vertically center */
+  padding: 0 10px 0 10px; /* top, right, bottom, left */
+  border-bottom: 3px solid rgba(255,255,255,0.3);
+}
+
+.logo{
+  width: 50%;
+  padding: 0.5em;
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  /* assigning 50% so that both logo and nav-right take up equal width */
+}
+
+.nav-right{
+  width: 50%;
+  padding: 0.5em; 
+  text-align: right;
+  font-weight: 300;
+  font-size: 1.2em;
+}
+
+.nav-right a{
+  color: var(--snow-white);
+  text-decoration: none;
+  padding: 0px 5px;
+}
+
+.search-container{
+  text-align: center;
+  color: var(--snow-white);
+  padding-top: 20%;
+  padding-bottom: 5%;
+}
+
+.search-container h1{
+  line-height: 1.5em;
+  font-weight: 800;
+  font-size: 2.5em;
+  text-shadow: 0px 9px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-bar{
+  font-size: 2em;
+  font-weight: 300;
+  color: black;
+  border: transparent;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding-right: 0;
+  margin-right: 0;
+  outline: none;
+  padding: 5px;
+  background: var(--snow-white);
+}
+
+.search-button{
+  font-size: 2em;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  border: transparent;
+  color: var(--snow-white);
+  font-weight: 600;
+  margin-left: -10px;
+  padding-left: 0;
+  padding: 5px;
+  background: rgb(77,176,53);
+  background: -moz-linear-gradient(var(--main-gradient));
+  background: -webkit-linear-gradient(var(--main-gradient));
+  background: linear-gradient(var(--main-gradient));
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0,0,0,.20);
+  cursor: pointer;
+}
+
+/* Featured Inventory */
+.featured-inventory{
+  background: var(--snow-white);
+  padding: 20px 0;
+}
+
+.featured-inventory h1{
+  font-size: 2.5em;
+  line-height: 1.2em;
+  color: var(--secondary-text-color);
+}
+
+.inventory-container{
+  display: flex;
+  flex-direction: row; /* make contents go in a row */
+  overflow-x: auto; /* allow the div to become scrollable */
+  overflow-y: hidden; /* hide the right scrollbar */
+  max-height: 25em;
+}
+
+.inventory-item {
+  margin: 2%;
+  display: flex;
+  flex-direction: row; /* once again make this content go in a row too */
+  -webkit-box-shadow: 5px 15px 20px 5px rgba(45,45,45,0.19); 
+  box-shadow: 5px 15px 20px 5px rgba(45,45,45,0.19);
+}
+
+.inventory-image {
+  flex-basis: 60%;
+}
+
+.inventory-description {
+  flex-basis: 40%;
+  padding: 5px;
+}
+
+.inventory-description h3{
+  font-weight: 800;
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.inventory-condition{
+  margin-right: 50%;
+  text-align: left;
+  font-weight: 600;
+}
+
+.inventory-miles{
+  text-align: right;
+  font-weight: 600;
+}
+
+.inventory-button{
+  padding: 5px;
+  width: 70%;
+  font-weight: 700;
+  background: rgb(77,176,53);
+  background: -moz-linear-gradient(var(--main-gradient));
+  background: -webkit-linear-gradient(var(--main-gradient));
+  background: linear-gradient(var(--main-gradient));
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgba(0,0,0,.20);
+  cursor: pointer;
+  border: transparent;
+  border-radius: 5px;
+  color: var(--snow-white);
+  font-size: 1.5em;
+  margin-left: 15%;
+}
